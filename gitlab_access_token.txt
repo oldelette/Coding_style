@@ -1,0 +1,2 @@
+git clone https://oauth2:9EZxjTesCQtjgUxjP5a3@gitlab.com/ssp19960710/0916.git
+9EZxjTesCQtjgUxjP5a3
