@@ -1,4 +1,5 @@
 import subprocess
+import gitlab
 import sys
 import os
 from config import *
