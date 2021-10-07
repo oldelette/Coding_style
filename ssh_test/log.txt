@@ -1,0 +1,11 @@
+[20211007 20:33:24 INFO]: Connected (version 2.0, client OpenSSH_8.6)
+[20211007 20:33:24 INFO]: Authentication (publickey) failed.
+[20211007 20:33:24 INFO]: Authentication (password) successful!
+[20211007 20:33:24 INFO]: Job[None]: Executing: sudo -S -p '' ls
+[20211007 20:33:24 INFO]: Job[None]: custom-cont-init.d
+[20211007 20:33:24 INFO]: Job[None]: custom-services.d
+[20211007 20:33:24 INFO]: Job[None]: logs
+[20211007 20:33:24 INFO]: Job[None]: ssh_host_keys
+[20211007 20:33:24 INFO]: Job[None]: sshd.pid
+[20211007 20:33:24 INFO]: Job[None]:Command status: 0
+[20211007 20:33:24 INFO]: Job[None]: Command executed.
