@@ -1,0 +1,10 @@
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          78G   14G   61G  19% /
+tmpfs            64M     0   64M   0% /dev
+tmpfs           2.0G     0  2.0G   0% /sys/fs/cgroup
+shm              64M     0   64M   0% /dev/shm
+/dev/sda5        78G   14G   61G  19% /config
+tmpfs           2.0G     0  2.0G   0% /proc/asound
+tmpfs           2.0G     0  2.0G   0% /proc/acpi
+tmpfs           2.0G     0  2.0G   0% /proc/scsi
+tmpfs           2.0G     0  2.0G   0% /sys/firmware

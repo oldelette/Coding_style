@@ -1,0 +1,23 @@
+Email: root@localhost
+EmailDemandSummaryIfThreat: TRUE
+EmailLanguage: English
+EmailNotifier: TRUE
+EmailServer: localhost:25
+EnableOnStart: FALSE
+ExclusionEncodings: UTF-8
+                    EUC-JP
+                    ISO-8859-1
+LogMaxSizeMB: 100
+NotifyOnUpdate: FALSE
+PrimaryUpdateSourcePath: sophos:
+PrimaryUpdateUsername: FAVL85O4BRAY1
+PrimaryUpdatePassword: ********
+SendErrorEmail: TRUE
+SendThreatEmail: TRUE
+UINotifier: TRUE
+UIpopupNotification: TRUE
+UIttyNotification: TRUE
+UpdatePeriodMinutes: 60
+NamedScans NOT CONFIGURED
+LiveProtection: ENABLED
+ScanArchives: MIXED
