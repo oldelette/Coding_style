@@ -1,0 +1,4 @@
+export HOSTNAME=172.17.0.2
+export PORT=2222
+export USERNAME=test
+export PASSWORD=123
