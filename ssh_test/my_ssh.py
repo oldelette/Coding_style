@@ -1,30 +1,45 @@
 import paramiko
+from dataclasses import dataclass, field
 
-hostname = '172.17.0.2'
-port = 2222
-username = 'test'
-password = '123'
-cmd = "ls"
-#cmd = "userdel mcleezs"
-#cmd = "useradd mcleezs"
-#cmd = "cat /proc/version"
+@dataclass
+class SSH:
 
-client = paramiko.SSHClient()
-client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-client.connect(hostname, port, username, password)
-command = "sudo -S -p '' %s" % cmd
-stdin, stdout, stderr = client.exec_command(command=command)
-stdin.write(password + "\n")
-stdin.flush()
+    #hostname = '127.0.0.1'
+    hostname: str = field(default = "127.0.0.1")
+    #port = 49153
+    port:int = field(default=49153)
+    #username = 'root'
+    username:str = field(default='root')
+    #password = 'root'
+    password:str = field(default='root')
+    #cmd = "ls"
+    cmd:str = field(default="ls")
+    #cmd = "userdel mcleezs"
+    #cmd = "useradd mcleezs"
+    #cmd = "cat /proc/version"
+        
+    def ssh_connect(self):
+        client = paramiko.SSHClient()
+        client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        client.connect(self.hostname, self.port, self.username, self.password)
+        print((self.hostname, self.port, self.username, self.password))
+        #command = "sudo -S -p '' %s" % cmd
+        stdin, stdout, stderr = client.exec_command(command=self.cmd)
+        stdin.write(self.password + "\n")
+        stdin.flush()
 
-stdoutput = [line for line in stdout]
-#stdinput = [line for line in stdin]
-stderrp = [line for line in stderr]
+        stdoutput = [line for line in stdout]
+        stderrp = [line for line in stderr]
+        
+        print("stdoutput: ", stdoutput)
+        print("stderroutput: ",stderrp)
+        print("--"*20)
+        
+        client.close()
 
-print("stdoutput: ", stdoutput)
-print("stderr: ", stderrp)
-print("stderroutput: ",stderrp)
-print("--"*20)
+def main():
+    myssh = SSH()
+    myssh.ssh_connect()
 
-client.close()
-
+if __name__ == "__main__":
+    main()
